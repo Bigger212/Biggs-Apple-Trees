@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "biggs_apple_trees:block/apple_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "biggs_apple_trees:block/apple_log"
+    },
+    "axis=z": {
+      "model": "biggs_apple_trees:block/apple_log_horizontal",
+      "x": 90
+    }
+  }
+}

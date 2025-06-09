@@ -1,0 +1,10 @@
+{
+  "block.biggs_apple_trees.apple_leaves": "Apple Leaves",
+  "block.biggs_apple_trees.apple_sapling": "Apple Sapling",
+
+  "block.biggs_apple_trees.apple_log": "Apple Log",
+  "block.biggs_apple_trees.apple_wood": "Apple Wood",
+  "block.biggs_apple_trees.stripped_apple_log": "Stripped Apple Log",
+  "block.biggs_apple_trees.stripped_apple_wood": "Stripped Apple Wood",
+  "block.biggs_apple_trees.apple_planks": "Apple Planks"
+}

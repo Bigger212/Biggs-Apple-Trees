@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "bigs_apple_trees",
+  "id": "biggs_apple_trees",
   "version": "${version}",
-  "name": "Big's Apple Trees",
+  "name": "Bigg's Apple Trees",
   "description": "Redesign of Minecraft's apples.",
   "authors": [],
   "contact": {},
   "license": "All-Rights-Reserved",
-  "icon": "assets/bigs_apple_trees/icon.png",
+  "icon": "assets/biggs_apple_trees/icon.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "net.bigger212.bigs_apple_trees.BigsAppleTreesDataGenerator"
+      "net.bigger212.biggs_apple_trees.BiggsAppleTreesDataGenerator"
     ],
     "client": [
-      "net.bigger212.bigs_apple_trees.BigsAppleTreesClient"
+      "net.bigger212.biggs_apple_trees.BiggsAppleTreesClient"
     ],
     "main": [
-      "net.bigger212.bigs_apple_trees.BigsAppleTrees"
+      "net.bigger212.biggs_apple_trees.BiggsAppleTrees"
     ]
   },
   "mixins": [
-    "bigs_apple_trees.mixins.json"
+    "biggs_apple_trees.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

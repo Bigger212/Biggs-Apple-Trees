@@ -1,0 +1,32 @@
+{
+  "textures": {
+    "leaves": "biggs_apple_trees:block/apple_leaves",
+    "flowers": "biggs_apple_trees:block/apple_leaves_flowers"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": { "texture": "#leaves", "tintindex": 0 },
+        "south": { "texture": "#leaves", "tintindex": 0 },
+        "east":  { "texture": "#leaves", "tintindex": 0 },
+        "west":  { "texture": "#leaves", "tintindex": 0 },
+        "up":    { "texture": "#leaves", "tintindex": 0 },
+        "down":  { "texture": "#leaves", "tintindex": 0 }
+      }
+    },
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "north": { "texture": "#flowers", "tintindex": -1 },
+        "south": { "texture": "#flowers", "tintindex": -1 },
+        "east":  { "texture": "#flowers", "tintindex": -1 },
+        "west":  { "texture": "#flowers", "tintindex": -1 },
+        "up":    { "texture": "#flowers", "tintindex": -1 },
+        "down":  { "texture": "#flowers", "tintindex": -1 }
+      }
+    }
+  ]
+}

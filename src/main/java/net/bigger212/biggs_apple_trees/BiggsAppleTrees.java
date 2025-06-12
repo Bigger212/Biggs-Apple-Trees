@@ -41,9 +41,12 @@ public class BiggsAppleTrees implements ModInitializer {
 
         ModWorldGeneration.generateModWorldGen();
         // TODO Serene Seasons compat.
+        // TODO Falling Petals visuals.
         // TODO Rotten apple.
+        // TODO Visual apple ripening.
         // TODO New tree shapes.
-        // TODO Complete fruit planks.
+        // TODO Immersive Weathering Dynamic flowering leaf_piles.
+        // TODO Complete fruit planks type.
     }
 
     public static class Config {

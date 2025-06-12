@@ -1,8 +1,9 @@
 {
   "variants": {
     "age=0": { "model": "biggs_apple_trees:block/apple_leaves" },
-    "age=1": { "model": "biggs_apple_trees:block/apple_leaves_flowers" },
-    "age=2": { "model": "biggs_apple_trees:block/apple_leaves_flowers" },
-    "age=3": { "model": "biggs_apple_trees:block/apple_leaves_flowers" }
+    "age=1": { "model": "biggs_apple_trees:block/flowering_apple_leaves" },
+    "age=2": { "model": "biggs_apple_trees:block/flowering_apple_leaves" },
+    "age=3": { "model": "biggs_apple_trees:block/flowering_apple_leaves" },
+    "age=99": { "model": "biggs_apple_trees:block/iw_flowering_apple_leaves_dummy" }
   }
 }

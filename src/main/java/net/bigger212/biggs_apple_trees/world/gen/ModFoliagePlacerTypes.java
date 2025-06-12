@@ -10,6 +10,6 @@ public class ModFoliagePlacerTypes {
     public static final FoliagePlacerType<?> APPLE_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("apple_foliage_placer", AppleFoliagePlacer.CODEC);
 
     public static void register() {
-        LOGGER.info("Registering Foliage Placer for " + MOD_ID);
+//        LOGGER.info("Registering Foliage Placer for " + MOD_ID);
     }
 }

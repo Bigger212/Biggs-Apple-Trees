@@ -9,6 +9,7 @@ import net.minecraft.block.PillarBlock;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -16,10 +17,25 @@ import net.minecraft.util.Identifier;
 import static net.bigger212.biggs_apple_trees.BiggsAppleTrees.*;
 
 public class ModBlocks {
+/////////////////////////////////////////////////// ModBlocks //////////////////////////////////////////////////////////
+// Init
+    private static Block registerBlock(String name, Block block) {
+        registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, new Identifier(MOD_ID, name), block);
+    }
 
-    // Apple
+    private static void registerBlockItem(String name, Block block) {
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings()));
+    }
+
+    public static void registerModBlocks() {
+//        LOGGER.info("Registering ModBlocks for " + MOD_ID);
+    }
+
+// Apple
     public static final Block APPLE_LEAVES = registerBlock("apple_leaves",
-            new AppleLeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque()));
+            new FruitLeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).nonOpaque(), Items.APPLE));
     public static final Block APPLE_SAPLING = registerBlock("apple_sapling",
             new SaplingBlock(new AppleSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
 
@@ -34,21 +50,4 @@ public class ModBlocks {
 
     public static final Block APPLE_PLANKS = registerBlock("apple_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
-
-////////////////////////////////////////////////// Registration ////////////////////////////////////////////////////////
-
-    private static Block registerBlock(String name, Block block) {
-        registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, new Identifier(MOD_ID, name), block);
-    }
-
-    private static Item registerBlockItem(String name, Block block) {
-        LOGGER.info("Registering {}", name);
-        return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings()));
-    }
-
-    public static void registerModBlocks() {
-        LOGGER.info("Registering ModBlocks for " + MOD_ID);
-    }
 }

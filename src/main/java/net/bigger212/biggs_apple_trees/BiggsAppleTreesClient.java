@@ -2,7 +2,7 @@ package net.bigger212.biggs_apple_trees;
 
 import net.bigger212.biggs_apple_trees.block.ModBlocks;
 import net.bigger212.biggs_apple_trees.block.entity.ModBlockEntities;
-import net.bigger212.biggs_apple_trees.block.entity.renderer.AppleLeavesBlockEntityRenderer;
+import net.bigger212.biggs_apple_trees.block.entity.renderer.FruitLeavesBlockEntityRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
@@ -15,11 +15,13 @@ public class BiggsAppleTreesClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        BlockEntityRendererFactories.register(ModBlockEntities.FRUIT_LEAF, AppleLeavesBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(ModBlockEntities.FRUIT_LEAF, FruitLeavesBlockEntityRenderer::new);
+
         // Register render layers
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.APPLE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.APPLE_SAPLING, RenderLayer.getCutout());
-        // Block tinting (biome-dependent)
+
+        // Biome tinting
         ColorProviderRegistry.BLOCK.register(
                 (state, world, pos, tintIndex) ->
                         world != null && pos != null
@@ -27,7 +29,8 @@ public class BiggsAppleTreesClient implements ClientModInitializer {
                                 : FoliageColors.getDefaultColor(),
                 ModBlocks.APPLE_LEAVES
         );
-        // Item tinting (use default foliage color)
+
+        // Item tinting
         ColorProviderRegistry.ITEM.register(
                 (stack, tintIndex) -> FoliageColors.getDefaultColor(),
                 ModBlocks.APPLE_LEAVES

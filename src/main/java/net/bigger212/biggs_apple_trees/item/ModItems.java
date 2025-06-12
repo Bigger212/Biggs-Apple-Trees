@@ -13,8 +13,8 @@ import net.minecraft.util.Identifier;
 import static net.bigger212.biggs_apple_trees.BiggsAppleTrees.*;
 
 public class ModItems {
-////////////////////////////////////////////////// Registration ////////////////////////////////////////////////////////
-
+////////////////////////////////////////////////// ModItems ////////////////////////////////////////////////////////////
+// Init
     private static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries) {
 
         entries.addAfter(Blocks.CHERRY_LOG,ModBlocks.APPLE_LOG);
@@ -28,16 +28,16 @@ public class ModItems {
         entries.addAfter(ModBlocks.APPLE_LOG, ModBlocks.APPLE_WOOD);
         entries.addAfter(ModBlocks.APPLE_WOOD, ModBlocks.STRIPPED_APPLE_LOG);
         entries.addAfter(ModBlocks.STRIPPED_APPLE_LOG, ModBlocks.STRIPPED_APPLE_WOOD);
-        entries.addAfter(ModBlocks.STRIPPED_APPLE_WOOD, ModBlocks.APPLE_PLANKS);
+//        entries.addAfter(ModBlocks.STRIPPED_APPLE_WOOD, ModBlocks.APPLE_PLANKS);
 
     }
 
-    private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
+    private static void registerItem(String name, Item item) {
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
     }
 
     public static void registerModItems() {
-        LOGGER.info("Registering Mod Items for " + MOD_ID);
+//        LOGGER.info("Registering Mod Items for " + MOD_ID);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModItems::addItemsToNaturalItemGroup);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(ModItems::addItemsToBuildingBlocksItemGroup);
     }

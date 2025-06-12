@@ -2,7 +2,7 @@ package net.bigger212.biggs_apple_trees.world.tree;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.bigger212.biggs_apple_trees.block.AppleLeavesBlock;
+import net.bigger212.biggs_apple_trees.block.FruitLeavesBlock;
 import net.bigger212.biggs_apple_trees.world.gen.ModFoliagePlacerTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.property.Properties;
@@ -49,7 +49,7 @@ public class AppleFoliagePlacer  extends FoliagePlacer {
                     int distance = Math.max(Math.abs(dx), Math.abs(dz));
                     int age = (distance < 2) ? 0 : random.nextInt(2); // 0 = no bloom, 1 = bloom
                     BlockState base = config.foliageProvider.get(random, pos);
-                    BlockState state = base.with(AppleLeavesBlock.AGE, age);
+                    BlockState state = base.with(FruitLeavesBlock.AGE, age);
                     if (state.contains(Properties.WATERLOGGED)) {
 
                         state = state.with(Properties.WATERLOGGED, false);

@@ -1,7 +1,6 @@
 {
   "parent": "minecraft:block/leaves",
   "textures": {
-    "particle": "biggs_apple_trees:block/apple_leaves",
     "all": "biggs_apple_trees:block/apple_leaves"
   }
 }

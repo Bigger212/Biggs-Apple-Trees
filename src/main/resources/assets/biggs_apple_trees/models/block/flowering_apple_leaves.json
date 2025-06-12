@@ -1,7 +1,8 @@
 {
   "textures": {
+    "particle": "biggs_apple_trees:block/apple_leaves",
     "leaves": "biggs_apple_trees:block/apple_leaves",
-    "flowers": "biggs_apple_trees:block/apple_leaves_flowers"
+    "flowers": "biggs_apple_trees:block/flowering_apple_leaves"
   },
   "elements": [
     {

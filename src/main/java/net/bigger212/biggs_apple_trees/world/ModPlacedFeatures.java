@@ -18,21 +18,31 @@ import static net.bigger212.biggs_apple_trees.BiggsAppleTrees.*;
 
 public class ModPlacedFeatures {
 
-    public static final RegistryKey<PlacedFeature> RARE_APPLE_TREE_PLACED_KEY = registerKey("rare_apple_tree_placed");
-
-    public static final RegistryKey<PlacedFeature> VERY_RARE_APPLE_TREE_PLACED_KEY = registerKey("very_rare_apple_tree_placed");
+    public static final RegistryKey<PlacedFeature> APPLE_TREE_PLACED = registerKey("apple_tree_placed");
+    public static final RegistryKey<PlacedFeature> FANCY_APPLE_TREE_PLACED = registerKey("fancy_apple_tree_placed");
+    public static final RegistryKey<PlacedFeature> FLOWER_FOREST_APPLE_TREE_PLACED = registerKey("flower_forest_apple_tree_placed");
+    public static final RegistryKey<PlacedFeature> FLOWER_FOREST_FANCY_APPLE_TREE_PLACED = registerKey("flower_forest_fancy_apple_tree_placed");
+    public static final RegistryKey<PlacedFeature> SPARSE_JUNGLE_APPLE_TREE_PLACED = registerKey("sparse_jungle_apple_tree_placed");
 
 ////////////////////////////////////////////////// Registration ////////////////////////////////////////////////////////
 
     public static void boostrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        register(context, RARE_APPLE_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.APPLE_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.2f, 1),
+        register(context, APPLE_TREE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.APPLE_BEES_005),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.005f, 2),
                         ModBlocks.APPLE_SAPLING));
 
-        register(context, VERY_RARE_APPLE_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.APPLE_KEY),
-                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.025f, 1),
+        register(context, FLOWER_FOREST_APPLE_TREE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.APPLE_BEES_002),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.05f, 2),
+                        ModBlocks.APPLE_SAPLING));
+
+        register(context, FLOWER_FOREST_FANCY_APPLE_TREE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.FANCY_APPLE_BEES_002),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.01f, 1),
+                        ModBlocks.APPLE_SAPLING));
+
+        register(context, SPARSE_JUNGLE_APPLE_TREE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.JUNGLE_APPLE),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(0, 0.1f, 2),
                         ModBlocks.APPLE_SAPLING));
     }
 

@@ -12,6 +12,6 @@ public class AppleSaplingGenerator extends SaplingGenerator {
     @Nullable
     @Override
     protected RegistryKey<ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-        return ModConfiguredFeatures.APPLE_KEY;
+        return ModConfiguredFeatures.APPLE_SAPLING;
     }
 }

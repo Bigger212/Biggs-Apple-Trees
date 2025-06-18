@@ -14,13 +14,13 @@ import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.foliage.FoliagePlacer;
 import net.minecraft.world.gen.foliage.FoliagePlacerType;
 
-public class AppleFoliagePlacer  extends FoliagePlacer {
-    public static final Codec<AppleFoliagePlacer> CODEC = RecordCodecBuilder.create(chestnutFoliagePlacerInstance ->
+public class AppleBlobFoliagePlacer extends FoliagePlacer {
+    public static final Codec<AppleBlobFoliagePlacer> CODEC = RecordCodecBuilder.create(chestnutFoliagePlacerInstance ->
             fillFoliagePlacerFields(chestnutFoliagePlacerInstance).and(Codec.intRange(0, 12).fieldOf("height")
-                    .forGetter(instance -> instance.height)).apply(chestnutFoliagePlacerInstance, AppleFoliagePlacer::new));
+                    .forGetter(instance -> instance.height)).apply(chestnutFoliagePlacerInstance, AppleBlobFoliagePlacer::new));
     private final int height;
 
-    public AppleFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
+    public AppleBlobFoliagePlacer(IntProvider radius, IntProvider offset, int height) {
         super(radius, offset);
         this.height = height;
     }

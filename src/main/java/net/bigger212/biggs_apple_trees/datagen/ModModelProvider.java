@@ -16,7 +16,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.APPLE_LEAVES); // NOT LEAVES DO MANUAL!
         blockStateModelGenerator.registerTintableCross(ModBlocks.APPLE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
-
         blockStateModelGenerator.registerLog(ModBlocks.APPLE_LOG).log(ModBlocks.APPLE_LOG).wood(ModBlocks.APPLE_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_APPLE_LOG).log(ModBlocks.STRIPPED_APPLE_LOG).wood(ModBlocks.STRIPPED_APPLE_WOOD);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.APPLE_PLANKS);

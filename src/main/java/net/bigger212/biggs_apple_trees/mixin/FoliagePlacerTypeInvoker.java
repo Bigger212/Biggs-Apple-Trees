@@ -10,6 +10,10 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 public interface FoliagePlacerTypeInvoker {
     @Invoker
     static <P extends FoliagePlacer> FoliagePlacerType<P> callRegister(String id, Codec<P> codec) {
+        /*
+        This line is never executed.
+        It's required because Java needs some method body, but it’ll get replaced by Mixin during runtime.
+         */
         throw new IllegalStateException();
     }
 }

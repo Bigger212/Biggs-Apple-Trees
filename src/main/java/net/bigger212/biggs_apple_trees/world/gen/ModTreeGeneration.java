@@ -10,17 +10,27 @@ public class ModTreeGeneration {
 
     public static void generateTrees() {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(
-                        BiomeKeys.FLOWER_FOREST,
-                        BiomeKeys.SPARSE_JUNGLE),
+                BiomeKeys.FLOWER_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION,
-                ModPlacedFeatures.RARE_APPLE_TREE_PLACED_KEY
+                ModPlacedFeatures.FLOWER_FOREST_APPLE_TREE_PLACED
         );
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(
-                        BiomeKeys.PLAINS,
-                        BiomeKeys.MEADOW),
+        BiomeModifications.addFeature(
+                BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION,
-                ModPlacedFeatures.VERY_RARE_APPLE_TREE_PLACED_KEY
+                ModPlacedFeatures.FLOWER_FOREST_FANCY_APPLE_TREE_PLACED
+        );
+
+        BiomeModifications.addFeature(
+                BiomeSelectors.includeByKey(BiomeKeys.PLAINS),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                ModPlacedFeatures.APPLE_TREE_PLACED
+        );
+
+        BiomeModifications.addFeature(
+                BiomeSelectors.includeByKey(BiomeKeys.SPARSE_JUNGLE),
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                ModPlacedFeatures.SPARSE_JUNGLE_APPLE_TREE_PLACED
         );
     }
 }

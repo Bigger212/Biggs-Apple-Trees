@@ -1,5 +1,5 @@
 {
-  "feature": "biggs_apple_trees:apple_tree",
+  "feature": "biggs_apple_trees:apple_bees_005",
   "placement": [
     {
       "type": "minecraft:count",
@@ -8,10 +8,10 @@
         "distribution": [
           {
             "data": 0,
-            "weight": 4
+            "weight": 199
           },
           {
-            "data": 1,
+            "data": 2,
             "weight": 1
           }
         ]

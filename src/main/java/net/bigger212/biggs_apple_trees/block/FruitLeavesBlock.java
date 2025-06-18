@@ -34,7 +34,8 @@ public class FruitLeavesBlock extends LeavesBlock implements BlockEntityProvider
     public FruitLeavesBlock(Settings settings, Item fruit) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState()
-                .with(AGE, 0));
+                .with(AGE, 0)
+                .with(PERSISTENT, false));
         this.fruit = fruit;
     }
 
